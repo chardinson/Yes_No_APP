@@ -9,10 +9,18 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      title: 'Yes No App',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Material App Bar'),
+        ),
         body: Center(
-          child: Text('Hello World!'),
+          child: FilledButton.tonal(
+            onPressed: () {},
+            child: const Text('Click'),
+          ),
         ),
       ),
     );
