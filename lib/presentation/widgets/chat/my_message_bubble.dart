@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class MyMessageBubble extends StatelessWidget {
@@ -17,7 +15,7 @@ class MyMessageBubble extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text(
-              'Hi 1Password!',
+              'Hi support!',
               style: TextStyle(color: Colors.white),
             ),
           ),
