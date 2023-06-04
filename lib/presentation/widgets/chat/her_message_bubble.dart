@@ -35,10 +35,21 @@ class _ImageBubble extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       child: Image.network(
-          'https://yesno.wtf/assets/no/32-b62f1f8058c1d7f06c528319faccfb38.gif',
-          width: size.width * 0.7,
-          height: 150,
-          fit: BoxFit.cover),
+        'https://yesno.wtf/assets/no/32-b62f1f8058c1d7f06c528319faccfb38.gif',
+        width: size.width * 0.7,
+        height: 150,
+        fit: BoxFit.cover,
+        loadingBuilder: (context, child, loadingProgress) {
+          if (loadingProgress == null) return child;
+
+          return Container(
+            width: size.width * 0.7,
+            height: 150,
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: const Text('1Password Support sending image...'),
+          );
+        },
+      ),
     );
   }
 }
