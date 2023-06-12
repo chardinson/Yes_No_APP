@@ -7,5 +7,9 @@ class ChatProvider extends ChangeNotifier {
     Message(text: 'Tengo un problema con mi cuenta', fromWho: FromWho.me)
   ];
 
-  Future<void> sendMessage(String text) async {}
+  Future<void> sendMessage(String text) async {
+    final sendMessage = Message(text: text, fromWho: FromWho.me);
+    messagesList.add(sendMessage);
+    notifyListeners();
+  }
 }
