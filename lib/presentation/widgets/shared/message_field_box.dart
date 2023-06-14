@@ -19,6 +19,7 @@ class MessageFieldBox extends StatelessWidget {
           enabledBorder: outLineInputBorder,
           focusedBorder: outLineInputBorder,
           filled: true,
+          hintText: 'Termina tu mensaje con un "?"',
           suffixIcon: IconButton(
             icon: const Icon(Icons.send),
             onPressed: () {
